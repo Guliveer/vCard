@@ -1,0 +1,258 @@
+@import url(icons.css);
+@import url(SF-Pro.css);
+
+body {
+    background: url(bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: rgb(34, 34, 40);
+    color: white;
+    height: auto;
+    margin: 10px;
+}
+
+* {
+    font-family: 'Roboto', sans-serif !important;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+    font-stretch: normal;
+}
+
+a {
+    color: white !important;
+    text-decoration: none;
+}
+
+hr {
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: none !important;
+    border-radius: 10px;
+    height: 1px;
+    width: 50%;
+    transform: translateX(50%);
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.pic {
+    background-image: url(../image.jpg);
+    background-size: cover;
+    width: 8rem;
+    min-width: 100px;
+    aspect-ratio: 1/1;
+    border-radius: 100%;
+}
+
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(37, 37, 37, 0.25);
+    border-radius: 10px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    margin-bottom: 10px;
+    padding: 35px;
+    backdrop-filter: blur(40px);
+    -webkit-backdrop-filter: blur(40px);
+    line-height: 1.6rem;
+    width: 40%;
+    min-width: 250px;
+    max-width: 80%;
+    height: auto;
+    margin: 0;
+}
+
+.card * {
+    text-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
+}
+
+.card .person {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+}
+
+/* if .card width is <300px */
+@media screen and (max-width: 1215px) {
+    .card .person {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .pic {
+        width: 7rem;
+    }
+
+    .card .data {
+        margin-top: 20px;
+        margin-left: 0 !important;
+    }
+
+    .nick {
+        margin: 0 !important;
+    }
+
+    .card .data .birth {
+        margin-top: 8px !important;
+        margin-bottom: -15px !important;
+    }
+}
+
+
+.card .data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 40px;
+}
+
+.card .data .name {
+    font-size: 1.3rem;
+    font-weight: 400;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.nick {
+    font-size: 0.9rem;
+    opacity: 0.6;
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+.nick::before {
+    content: '„';
+}
+
+.nick::after {
+    content: '”';
+}
+
+.card .data .birth {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+}
+
+.card .contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.8rem;
+}
+
+.card .contact .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    width: max-content;
+}
+
+.card .contact .main [class^="linearicons-"]::before {
+    font-weight: 600;
+}
+
+.card .contact .phone,
+.card .contact .email {
+    background-color: white;
+    border-radius: 10px;
+    padding: 3px 10px 3px 10px;
+    margin-bottom: 5px;
+    width: max-content;
+}
+
+.card .contact .phone *,
+.card .contact .email * {
+    color: black !important;
+    text-shadow: none;
+    font-weight: 400;
+}
+
+.card .contact .social {
+    margin-top: 10px;
+}
+
+.card .contact .social li {
+    display: inline-block;
+    margin: 0 10px 0 10px;
+}
+
+.card .contact .social li a {
+    color: white;
+    transition: color 0.15s ease;
+}
+
+.card .contact .social li a:hover {
+    color: #c9c9c9 !important;
+}
+
+.add-contact {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.add-contact img {
+    width: 7rem;
+    height: auto;
+    aspect-ratio: 1/1;
+    padding: 0;
+}
+
+.add-contact .qr-text {
+    background-color: white;
+    border-radius: 7px;
+    margin-top: 10px;
+    width: calc(7rem - 10px);
+    padding: 0 5px 0 5px;
+}
+
+.add-contact .qr-text * {
+    color: black !important;
+    font-size: 0.8rem;
+    text-shadow: none;
+}
+
+@media screen and (max-height: 650px) {
+    .card {
+        width: fit-content;
+        min-width: 500px !important;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    hr {
+        transform: rotate(90deg);
+        width: 100px !important;
+    }
+
+    .card .contact {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+}
