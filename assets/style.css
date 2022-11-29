@@ -1,7 +1,7 @@
 @import url(icons.css);
 
 body {
-    background: url(bg.jpg);
+    background: url(../background.jpg);
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -43,6 +43,7 @@ hr {
     min-width: 100px;
     aspect-ratio: 1/1;
     border-radius: 100%;
+    box-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
 }
 
 .card {
@@ -52,7 +53,6 @@ hr {
     transform: translate(-50%, -50%);
     background-color: rgba(37, 37, 37, 0.25);
     border-radius: 10px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
     margin-bottom: 10px;
     padding: 35px;
     backdrop-filter: blur(40px);
@@ -66,7 +66,7 @@ hr {
 }
 
 .card * {
-    text-shadow: 0 0 7px rgba(0, 0, 0, 0.3);
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
 }
 
 .card .person {
@@ -126,6 +126,10 @@ hr {
     text-align: center;
 }
 
+.card .data .name .first-name::after {
+    content: ' ';
+}
+
 .nick {
     font-size: 0.9rem;
     opacity: 0.6;
@@ -133,16 +137,7 @@ hr {
     margin-left: 10px;
 }
 
-.nick::before {
-    content: '„';
-}
-
-.nick::after {
-    content: '”';
-}
-
 .card .data .birth {
-    margin-top: 1rem;
     font-size: 0.85rem;
 }
 

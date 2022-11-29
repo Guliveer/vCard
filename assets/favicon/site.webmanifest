@@ -1,6 +1,6 @@
 {
-    "name": "Oliwer Pawelski [vCard]",
-    "short_name": "Oliwer Pawelski [vCard]",
+    "name": "Oliwer Pawelski | vCard",
+    "short_name": "Oliwer Pawelski | vCard",
     "icons": [
         {
             "src": "android-chrome-36x36.png",
@@ -48,6 +48,6 @@
             "type": "image/png"
         }
     ],
-    "theme_color": "#ffffff",
+    "theme_color": "#6128d5",
     "background_color": "#ffffff"
 }
