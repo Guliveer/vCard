@@ -1,0 +1,45 @@
+//! DO NOT EDIT ANYTHING
+// Insert _vcfURL as src attribute into #vcf-url
+$('#vcf-url').attr('src', "https://api.qrserver.com/v1/create-qr-code/?data=" + _vcfURL + "&size=150x150");
+
+// Insert _firstNAME
+$('.first-name').text(_firstNAME);
+
+// Insert _lastNAME
+$('.last-name').text(_lastNAME);
+
+// Insert _nick
+if (_nick != "") {
+    $('.nick').text('„' + _nick + '”');
+}
+
+// Insert _birthday
+$('#birthday').text(_birthday);
+
+// Insert _phone
+$('#phone').text(_phone);
+$('#phone_a').attr('href', "tel:" + _phone);
+
+// Insert _email
+$('#email').text(_email);
+$('#email_a').attr('href', "mailto:" + _email);
+
+// Insert _links
+var items = [];
+$.each(_links, function (key, val) {
+    items.push("<li>" + "<a href='" + val + "' target='_blank'>" + key + "</a></li>");
+});
+$("<div/>", {
+    html: items.join("")
+}).appendTo(".social");
+
+// Set website title
+document.title = _firstNAME + " " + _lastNAME + " | vCard";
+
+// Put copyright info at the end of <body>
+var year = new Date().getFullYear();
+var copyright = document.createElement("div");
+copyright.id = "copyright-info";
+copyright.style.display = "none";
+copyright.innerHTML = "&copy; " + year + " Oliwer Pawelski<br/>All rights reserved.";
+document.body.appendChild(copyright);
