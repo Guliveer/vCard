@@ -2,6 +2,7 @@
 
 :root {
 	--font-color-base: hsl(0, 0%, 0%);
+	--link-color: rgb(0, 106, 255);
 }
 
 body {
@@ -25,28 +26,9 @@ body {
 }
 
 a {
-	color: black !important;
+	color: var(--link-color) !important;
 	text-decoration: none;
 	font-weight: normal;
-	font-style: italic;
-	border-bottom: 1px solid transparent;
-	transition: border-color 0.15s ease-in-out;
-}
-
-a:hover {
-	border-color: black;
-}
-
-hr {
-	margin: 0;
-	margin-top: 20px;
-	margin-bottom: 20px;
-	border: none !important;
-	border-radius: 10px;
-	height: 2px;
-	width: 50%;
-	transform: translateX(50%);
-	background-color: rgb(0, 0, 0);
 }
 
 .pic {
@@ -74,6 +56,9 @@ hr {
 	max-width: 80%;
 	height: auto;
 	margin: 0;
+	display: flex;
+	gap: 20px;
+	flex-direction: column;
 }
 
 .card .person {
@@ -82,34 +67,20 @@ hr {
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	padding: 10px;
+	gap: 40px;
 }
 
-/* if .card width is <300px */
 @media screen and (max-width: 1215px) {
 	.card .person {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: space-between;
+		gap: 20px;
 	}
 
 	.pic {
 		width: 7rem;
-	}
-
-	.card .data {
-		margin-top: 20px;
-		margin-left: 0 !important;
-	}
-
-	.nick {
-		margin: 0 !important;
-	}
-
-	.card .data .birth {
-		margin-top: 8px !important;
-		margin-bottom: -15px !important;
 	}
 }
 
@@ -119,10 +90,9 @@ hr {
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	margin-left: 40px;
 }
 
-.card .data .name {
+.card .data .names {
 	font-size: 1.3rem;
 	font-weight: 400;
 	display: flex;
@@ -130,16 +100,12 @@ hr {
 	align-items: center;
 	justify-content: center;
 	text-align: center;
+	gap: 5px;
 }
 
 .card .data .name .last-name {
 	font-weight: bold;
-	margin-left: 5px;
 }
-
-/* .card .data .name .first-name::after {
-	content: " ";
-} */
 
 .nick {
 	color: hsl(0, 0%, 30%);
@@ -177,24 +143,34 @@ hr {
 .card .contact .email {
 	background-color: white;
 	border-radius: 10px;
-	padding: 3px 10px 3px 10px;
 	width: max-content;
 }
 
-.card .contact .phone *,
-.card .contact .email * {
-	color: black !important;
+.card .contact .phone a *,
+.card .contact .email a * {
+	color: var(--link-color) !important;
 	text-shadow: none;
 	font-weight: bold;
 }
 
-.card .contact .social {
-	margin-top: 10px;
+.card .contact .social div::before {
+	font-family: "Linearicons" !important;
+	content: "\ec17";
+	speak: none;
+	font-style: normal;
+	font-weight: bold;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	position: relative;
+	top: 2px;
 }
 
 .card .contact .social li {
 	display: inline-block;
-	margin: 0 10px 0 10px;
+	margin: 0 10px;
 }
 
 .add-contact {
@@ -222,7 +198,7 @@ hr {
 }
 
 .add-contact .qr-text * {
-	color: black !important;
+	color: var(--link-color) !important;
 	font-size: 0.8rem;
 	text-shadow: none;
 }
@@ -236,11 +212,6 @@ hr {
 		align-items: center;
 		justify-content: center;
 		text-align: center;
-	}
-
-	hr {
-		transform: rotate(90deg);
-		width: 100px !important;
 	}
 
 	.card .contact {
