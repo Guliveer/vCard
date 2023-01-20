@@ -170,16 +170,17 @@ a {
 
 .card .contact .social li {
 	display: inline-block;
-	margin: 0 10px;
+	list-style: none;
+	margin: 0 5px;
 }
 
 .add-contact {
-	margin-top: 20px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 	text-align: center;
+	gap: 5px;
 }
 
 .add-contact img {
@@ -191,10 +192,6 @@ a {
 
 .add-contact .qr-text {
 	background-color: white;
-	border-radius: 7px;
-	margin-top: 10px;
-	width: calc(7rem - 10px);
-	padding: 0 5px 0 5px;
 }
 
 .add-contact .qr-text * {
@@ -212,10 +209,11 @@ a {
 		align-items: center;
 		justify-content: center;
 		text-align: center;
+		gap: 40px;
 	}
 
 	.card .contact {
-		margin-right: 20px;
-		margin-left: 20px;
+		/* margin-right: 20px;
+		margin-left: 20px; */
 	}
 }
