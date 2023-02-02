@@ -1,0 +1,19 @@
+{
+	"files": [
+		{
+			"path": "index.html",
+			"bookmarks": [
+				{
+					"line": 111,
+					"column": 50,
+					"label": "Odnośniki"
+				},
+				{
+					"line": 128,
+					"column": 9,
+					"label": "Kod QR"
+				}
+			]
+		}
+	]
+}
