@@ -9,9 +9,14 @@
 					"label": "Odnośniki"
 				},
 				{
-					"line": 128,
-					"column": 9,
+					"line": 120,
+					"column": 78,
 					"label": "Kod QR"
+				},
+				{
+					"line": 123,
+					"column": 9,
+					"label": "Dodaj kontakt"
 				}
 			]
 		}

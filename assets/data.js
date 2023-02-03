@@ -1,6 +1,6 @@
 //! DO NOT EDIT ANYTHING BELOW THIS LINE
-// Insert _vcfURL as src attribute into #vcf-url
-$("#qr").attr("src", "https://api.qrserver.com/v1/create-qr-code/?data=" + _vcfURL + "&color=fff&bgcolor=000&margin=0&format=svg");
+// Set website title
+document.title = _firstNAME + " " + _lastNAME + " | vCard";
 
 // Insert _firstNAME and _lastNAME
 $("#text01").text(_firstNAME + " " + _lastNAME);
@@ -28,5 +28,5 @@ $("#buttons03").empty().append(items.join(""));
 // Edit default download file name
 $("#add-contact").attr("download", _firstNAME + "-" + _lastNAME + ".vcf");
 
-// Set website title
-document.title = _firstNAME + " " + _lastNAME + " | vCard";
+// Insert _vcfURL as src attribute into #vcf-url
+$("#qr").attr("src", "https://api.qrserver.com/v1/create-qr-code/?data=" + _vcfURL + "&color=fff&bgcolor=000&margin=0&format=svg");
